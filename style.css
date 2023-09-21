@@ -1,0 +1,102 @@
+:root{
+  --accentColor: #b9b9b9;
+  --primaryColor: #000000;
+  --secondaryColor: #808080;
+  --textColor: #ffffff;
+}
+
+
+header{
+  text-align: center;
+  height: 5em;
+  border-bottom: solid var(--accentColor);
+  background-color: var(--secondaryColor);
+}
+body{
+  margin: 0;
+  background-color: var(--primaryColor);
+  color: var(--textColor);
+}
+input{
+  width: 8em;
+}
+
+
+.gameBody{
+  transition: .5s ease-in-out;
+  display: grid;
+  width: 70%;
+  height: 80%;
+  margin: 15%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: .25em;
+  background-color: var(--secondaryColor);
+}
+.gameBody>div{
+  transition: .25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primaryColor);
+  width: auto;
+  height: auto;
+  background-color: var(--accentColor);
+  border: solid var(--primaryColor);
+  font-size: 5vh;
+  background-size: contain;
+}
+.gameBody>div>p{
+  transition: .25s ease-in-out;
+  margin: 0;
+  position: absolute;
+}
+.gameStatus{
+  text-align: center;
+  font-size: xx-large;
+  margin-top: 2em;
+}
+.gameSettings{
+  text-align: center;
+}
+.winstate{
+  animation: winGlow ease-in-out 2s infinite;
+}
+@keyframes winGlow {
+  0%,100%{
+    filter: drop-shadow(0 0 4px gold);
+  }50%{
+    filter: drop-shadow(0 0 20px gold);
+  }
+}
+.loseState{
+  animation: loseGlow ease-in-out 2s infinite;
+}
+@keyframes loseGlow {
+  0%,100%{
+    filter: drop-shadow(0 0 4px red);
+  }50%{
+    filter: drop-shadow(0 0 20px red);
+  }
+}
+
+.settingsForm{
+  display: flex;
+  justify-content: center;
+}
+.settingsForm>div{
+  text-align: center;
+}
+.settingsForm>div>button{
+  text-align: center;
+  width: 2em;
+  height: 2em;
+}
+.settingsForm>div>div{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+}

@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minesweeper</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <header>
+    <h1>
+      Minesweeper
+    </h1>
+    <p>By kolby strang</p>
+  </header>
+
+  <div id="gameStatus" class="gameStatus">empty</div>
+  <div id="gameBody" class="gameBody">
+    Help
+  </div>
+
+
+  <div class="settingsForm">
+    x
+    <div>
+      <button><i class="fa fa-chevron-up" onclick="modifySize(1, 'x')" aria-hidden="true"></i></button>
+      <div id="rows">10</div>
+      <button><i class="fa fa-chevron-down" onclick="modifySize(-1, 'x')" aria-hidden="true"></i></button>
+    </div>
+    y
+    <div>
+      <button><i class="fa fa-chevron-up" onclick="modifySize(1, 'y')" aria-hidden="true"></i></button>
+      <div id="columns">10</div>
+      <button><i class="fa fa-chevron-down" onclick="modifySize(-1, 'y')" aria-hidden="true"></i></button>
+    </div>
+  </div>
+    
+
+
+  <script src="app.js"></script>
+</body>
+</html>
